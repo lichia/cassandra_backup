@@ -18,5 +18,13 @@ module CassandraBackup
     def connection
       @connection ||= Cassandra.new(command.keyspace, command.servers)
     end
+
+    def input_io
+      $stdin
+    end
+
+    def output_io
+      $stdout
+    end
   end
 end

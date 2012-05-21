@@ -1,0 +1,16 @@
+= CassandraBackup
+
+CassandraBackup is a command line too for dumping and restoring a Cassandra column family.
+
+== Dumping a column family
+
+Run cassandra_dump, specifying the column family and output:
+
+  ./bin/cassandra_dump depot_production > backup.json
+
+== Restoring a column family
+
+Run cassandra_import, specifying the column family and input:
+
+  ./bin/cassandra_import depot_production < backup.json
+

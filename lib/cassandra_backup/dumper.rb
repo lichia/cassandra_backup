@@ -5,7 +5,7 @@ module CassandraBackup
     def run
       column_family_names.each do |column_family|
         connection.each(column_family) do |key, attributes|
-          command.output_io.puts encoder.encode([column_family, key, attributes])
+          output_io.puts encoder.encode([column_family, key, attributes])
         end
       end
     end
