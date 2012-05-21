@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require File.expand_path('../../lib/command',  __FILE__)
-require 'dumper'
-
-Dumper.new.dump!

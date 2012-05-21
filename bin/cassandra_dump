@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../lib/cassandra_backup',  __FILE__)
+CassandraBackup::Dumper.run!
