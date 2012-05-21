@@ -1,0 +1,1 @@
+cassandra = Cassandra.new('system', [])
