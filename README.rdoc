@@ -13,4 +13,3 @@ Run cassandra_dump, specifying the keyspace:
 Run cassandra_import, specifying the keyspace:
 
   ./bin/cassandra_import depot_production < backup.json
-
