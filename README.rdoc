@@ -2,15 +2,14 @@
 
 CassandraBackup is a command line tool for dumping and restoring a Cassandra column family.
 
-== Dumping a column family
+== Dumping a Keyspace
 
-Run cassandra_dump, specifying the column family and output:
+Run cassandra_dump, specifying the keyspace:
 
   cassandra_dump depot_production > backup.json
 
-== Restoring a column family
+== Restoring a Keyspace
 
-Run cassandra_import, specifying the column family and input:
+Run cassandra_import, specifying the keyspace:
 
   cassandra_import depot_production < backup.json
-
