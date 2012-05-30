@@ -13,3 +13,9 @@ Run cassandra_dump, specifying the keyspace:
 Run cassandra_import, specifying the keyspace:
 
   cassandra_import depot_production < backup.json
+
+== Options
+
+  --servers:: A comma delimited list of servers. Defaults to 127.0.0.1:9160. (--servers 127.0.0.14:9169,127.0.1.19:9100)
+  --version:: Set cassandra version. Defaults to 1.0. (--version 0.6)
+  --columns:: The column families to dump. Defaults to all. (--columns Widgets --columns People)

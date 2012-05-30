@@ -14,10 +14,13 @@ module CassandraBackup
       OptionParser.new do |opts|
         opts.banner = "Usage: keyspace [options]"
         opts.on('-s', '--servers SERVERS', 'Set server list. Default is 127.0.0.1:9160.') do |v|
-          options[:servers] = v.split(',')
+          options[:servers] = v.split(/\s|,/)
         end
         opts.on('-v', '--version VERSION', 'Set cassandra version. Default is 1.0.') do |v|
           options[:version] = v
+        end
+        opts.on('-c', '--columns Columns', 'Set column families. Defaults to all') do |v|
+          (options[:columns] ||= []).concat v.split(/\s|,/)
         end
         opts.on('-h', 'Show this help message.') do
           $stdout.puts opts; exit
@@ -33,7 +36,17 @@ module CassandraBackup
     end
 
     def servers
-      options[:servers] || ['127.0.0.1:9160']
+      if options[:servers]
+        options[:servers]
+      else
+        ['127.0.0.1:9160']
+      end
+    end
+
+    def columns
+      if options[:columns]
+        options[:columns]
+      end
     end
 
     def required_version
