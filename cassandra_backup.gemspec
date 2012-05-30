@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version     = '>= 1.8.7'
   s.required_rubygems_version = '>= 1.8.0'  
-  s.executables   = ['casssandra_dump', 'cassandra_import']
+  s.executables   = ['cassandra_dump', 'cassandra_import']
   s.extra_rdoc_files = ['README.rdoc']
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test}/*`.split("\n")

@@ -1,6 +1,6 @@
 = CassandraBackup
 
-CassandraBackup is a command line tool for dumping and restoring a Cassandra column family.
+CassandraBackup is a command line tool for dumping and restoring a Cassandra keyspace.
 
 == Dumping a Keyspace
 
