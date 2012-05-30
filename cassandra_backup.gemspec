@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'cassandra_backup'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.description = 'Cassandra Backup'
   s.summary = 'Cassandra Backup'
   s.authors = ['Infogroup']
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/data-axle/cassandra_backup'
 
   s.required_ruby_version     = '>= 1.8.7'
-  s.required_rubygems_version = '>= 1.8.0'  
+  s.required_rubygems_version = '>= 1.3.6'  
   s.executables   = ['cassandra_dump', 'cassandra_import']
   s.extra_rdoc_files = ['README.rdoc']
   s.files       = `git ls-files`.split("\n")
