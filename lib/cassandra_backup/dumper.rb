@@ -12,7 +12,11 @@ module CassandraBackup
 
     private
       def column_family_names
-        connection.column_families.keys - ['schema_migrations']
+        if command.columns
+          command.columns
+        else
+          connection.column_families.keys - ['schema_migrations']
+        end
       end
 
       def encoder
