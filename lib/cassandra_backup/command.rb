@@ -1,3 +1,5 @@
+require 'optparse'
+
 module CassandraBackup
   class Command
 

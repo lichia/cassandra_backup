@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'cassandra_backup'
-  s.version = '0.0.4'
+  s.version = '0.0.6'
   s.description = 'Cassandra Backup'
   s.summary = 'Cassandra Backup'
   s.authors = ['Infogroup']
